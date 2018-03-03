@@ -2,7 +2,7 @@
 
 #include "../dxvk_device.h"
 
-#include "../util/util_env.h"
+#include "../../util/util_env.h"
 
 #include "dxvk_hud_devinfo.h"
 #include "dxvk_hud_fps.h"

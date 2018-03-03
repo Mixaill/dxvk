@@ -24,11 +24,9 @@
 ** IN THE MATERIALS.
 */
 
-#ifndef GLSLstd450_HPP
-#define GLSLstd450_HPP
+#ifndef GLSLstd450_H
+#define GLSLstd450_H
 
-namespace spv {
-  
 static const int GLSLstd450Version = 100;
 static const int GLSLstd450Revision = 3;
 
@@ -130,6 +128,4 @@ enum GLSLstd450 {
     GLSLstd450Count
 };
 
-}
-
-#endif  // #ifndef GLSLstd450_HPP
+#endif  // #ifndef GLSLstd450_H

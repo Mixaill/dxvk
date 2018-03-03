@@ -974,7 +974,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450FindILsb);
+    m_code.putWord(GLSLstd450FindILsb);
     m_code.putWord(operand);
     return resultId;
   }
@@ -989,7 +989,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450FindUMsb);
+    m_code.putWord(GLSLstd450FindUMsb);
     m_code.putWord(operand);
     return resultId;
   }
@@ -1004,7 +1004,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450FindSMsb);
+    m_code.putWord(GLSLstd450FindSMsb);
     m_code.putWord(operand);
     return resultId;
   }
@@ -1405,7 +1405,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450SAbs);
+    m_code.putWord(GLSLstd450SAbs);
     m_code.putWord(operand);
     return resultId;
   }
@@ -1420,7 +1420,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450FAbs);
+    m_code.putWord(GLSLstd450FAbs);
     m_code.putWord(operand);
     return resultId;
   }
@@ -1602,7 +1602,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Fma);
+    m_code.putWord(GLSLstd450Fma);
     m_code.putWord(a);
     m_code.putWord(b);
     m_code.putWord(c);
@@ -1620,7 +1620,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450FMax);
+    m_code.putWord(GLSLstd450FMax);
     m_code.putWord(a);
     m_code.putWord(b);
     return resultId;
@@ -1637,7 +1637,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450FMin);
+    m_code.putWord(GLSLstd450FMin);
     m_code.putWord(a);
     m_code.putWord(b);
     return resultId;
@@ -1654,7 +1654,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450NMax);
+    m_code.putWord(GLSLstd450NMax);
     m_code.putWord(a);
     m_code.putWord(b);
     return resultId;
@@ -1671,7 +1671,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450NMin);
+    m_code.putWord(GLSLstd450NMin);
     m_code.putWord(a);
     m_code.putWord(b);
     return resultId;
@@ -1688,7 +1688,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450SMax);
+    m_code.putWord(GLSLstd450SMax);
     m_code.putWord(a);
     m_code.putWord(b);
     return resultId;
@@ -1705,7 +1705,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450SMin);
+    m_code.putWord(GLSLstd450SMin);
     m_code.putWord(a);
     m_code.putWord(b);
     return resultId;
@@ -1722,7 +1722,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450UMax);
+    m_code.putWord(GLSLstd450UMax);
     m_code.putWord(a);
     m_code.putWord(b);
     return resultId;
@@ -1739,7 +1739,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450UMin);
+    m_code.putWord(GLSLstd450UMin);
     m_code.putWord(a);
     m_code.putWord(b);
     return resultId;
@@ -1757,7 +1757,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450FClamp);
+    m_code.putWord(GLSLstd450FClamp);
     m_code.putWord(x);
     m_code.putWord(minVal);
     m_code.putWord(maxVal);
@@ -1776,7 +1776,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450NClamp);
+    m_code.putWord(GLSLstd450NClamp);
     m_code.putWord(x);
     m_code.putWord(minVal);
     m_code.putWord(maxVal);
@@ -2048,7 +2048,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Sin);
+    m_code.putWord(GLSLstd450Sin);
     m_code.putWord(vector);
     return resultId;
   }
@@ -2063,7 +2063,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Cos);
+    m_code.putWord(GLSLstd450Cos);
     m_code.putWord(vector);
     return resultId;
   }
@@ -2078,7 +2078,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Sqrt);
+    m_code.putWord(GLSLstd450Sqrt);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2093,7 +2093,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450InverseSqrt);
+    m_code.putWord(GLSLstd450InverseSqrt);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2108,7 +2108,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Exp2);
+    m_code.putWord(GLSLstd450Exp2);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2123,7 +2123,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Log2);
+    m_code.putWord(GLSLstd450Log2);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2138,7 +2138,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Fract);
+    m_code.putWord(GLSLstd450Fract);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2153,7 +2153,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Ceil);
+    m_code.putWord(GLSLstd450Ceil);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2168,7 +2168,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Floor);
+    m_code.putWord(GLSLstd450Floor);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2183,7 +2183,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Round);
+    m_code.putWord(GLSLstd450Round);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2198,7 +2198,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450RoundEven);
+    m_code.putWord(GLSLstd450RoundEven);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2213,7 +2213,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450Trunc);
+    m_code.putWord(GLSLstd450Trunc);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2228,7 +2228,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450PackHalf2x16);
+    m_code.putWord(GLSLstd450PackHalf2x16);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2243,7 +2243,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450UnpackHalf2x16);
+    m_code.putWord(GLSLstd450UnpackHalf2x16);
     m_code.putWord(operand);
     return resultId;
   }
@@ -2321,7 +2321,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450InterpolateAtCentroid);
+    m_code.putWord(GLSLstd450InterpolateAtCentroid);
     m_code.putWord(interpolant);
     return resultId;
   }
@@ -2337,7 +2337,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450InterpolateAtSample);
+    m_code.putWord(GLSLstd450InterpolateAtSample);
     m_code.putWord(interpolant);
     m_code.putWord(sample);
     return resultId;
@@ -2354,7 +2354,7 @@ namespace dxvk {
     m_code.putWord(resultType);
     m_code.putWord(resultId);
     m_code.putWord(m_instExtGlsl450);
-    m_code.putWord(spv::GLSLstd450InterpolateAtOffset);
+    m_code.putWord(GLSLstd450InterpolateAtOffset);
     m_code.putWord(interpolant);
     m_code.putWord(offset);
     return resultId;

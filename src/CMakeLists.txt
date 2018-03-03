@@ -1,0 +1,6 @@
+add_subdirectory(util)
+add_subdirectory(spirv)
+add_subdirectory(dxvk)
+add_subdirectory(dxgi)
+add_subdirectory(dxbc)
+add_subdirectory(d3d11)

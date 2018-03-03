@@ -1,7 +1,7 @@
 #pragma once
 
-#include <spirv/spirv.hpp>
-#include <spirv/GLSL.std.450.hpp>
+#include <vulkan/spirv.hpp>
+#include <vulkan/GLSL.std.450.h>
 
 #include "spirv_include.h"
 

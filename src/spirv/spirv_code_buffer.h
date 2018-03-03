@@ -1,6 +1,6 @@
 #pragma once
 
-#include <spirv/spirv.hpp>
+#include <vulkan/spirv.hpp>
 
 #include <iostream>
 #include <vector>
