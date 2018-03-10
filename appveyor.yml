@@ -1,0 +1,41 @@
+version: '{build}'
+image: Visual Studio 2017
+clone_folder: c:\projects\dxvk\
+init:
+- ps: >-
+    new-itemproperty -path "HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319" -name "SchUseStrongCrypto" -Value 1 -PropertyType "DWord" | Out-Null
+
+    new-itemproperty -path "HKLM:\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319" -name "SchUseStrongCrypto" -Value 1 -PropertyType "DWord" | Out-Null
+environment:
+  VULKAN_SDK: C:\VulkanSDK\1.0.68.0\
+install:
+- ps: >-
+    Invoke-WebRequest -Uri https://vulkan.lunarg.com/sdk/download/1.0.68.0/windows/VulkanSDK-1.0.68.0-Installer.exe -OutFile vulkan.exe
+
+    ./vulkan.exe /S
+
+    Invoke-WebRequest -Uri http://download.mixaill.tk/vcpkg/vcpkg-spirvtools-2018_1.zip -OutFile vcpkg.zip
+
+    Expand-Archive ./vcpkg.zip -DestinationPath C:\projects\dxvk\vcpkg\
+build_script:
+- cmd: >-
+    cd c:\projects\dxvk\
+
+    mkdir c:\projects\dxvk\build_32\
+
+    mkdir c:\projects\dxvk\build_64\
+
+    cd c:\projects\dxvk\build_32\
+
+    cmake .. -G "Visual Studio 15 2017" -DCMAKE_TOOLCHAIN_FILE=c:/projects/dxvk/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static -DCMAKE_INSTALL_PREFIX=c:/projects/dxvk/install/32/
+
+    cmake --build . --config "Release" --target INSTALL
+
+    cd c:\projects\dxvk\build_64\
+
+    cmake .. -G "Visual Studio 15 2017 Win64" -DCMAKE_TOOLCHAIN_FILE=c:/projects/dxvk/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-windows-static -DCMAKE_INSTALL_PREFIX=c:/projects/dxvk/install/64/
+
+    cmake --build . --config "Release" --target INSTALL
+artifacts:
+- path: ./install/
+  name: DXVK_MSVC_Release_MT
