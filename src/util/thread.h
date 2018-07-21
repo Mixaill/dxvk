@@ -23,6 +23,24 @@ namespace dxvk {
     thread()
     : m_handle(nullptr) { }
 
+    thread(const thread&) = delete;
+
+    thread(thread&& other) noexcept: m_handle(other.m_handle), m_proc(std::move(other.m_proc)) {
+      other.m_handle = nullptr;
+    }
+
+    thread& operator=(const thread&) = delete;
+
+    thread& operator=(thread&& other) noexcept {
+      if (joinable())
+        std::terminate();
+
+      m_handle = other.m_handle;
+      m_proc = std::move(other.m_proc);
+      other.m_handle = nullptr;
+      return *this;
+    }
+
     explicit thread(std::function<void()> func) : m_proc(func) {
       m_handle = ::CreateThread(nullptr, 0, thread::nativeProc, this, 0, nullptr);
 
