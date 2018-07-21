@@ -31,12 +31,23 @@ namespace dxvk {
     }
 
     ~thread() {
-      if (m_handle)
-        ::CloseHandle(m_handle);
+      if (joinable())
+        std::terminate();
     }
 
     void join() {
-      ::WaitForSingleObject(m_handle, INFINITE);
+      if(::WaitForSingleObjectEx(m_handle, INFINITE, FALSE) == WAIT_FAILED)
+        throw DxvkError("Failed to join thread");
+      detach();
+    }
+
+    bool joinable() {
+      return m_handle != nullptr;
+    }
+
+    void detach() {
+      ::CloseHandle(m_handle);
+      m_handle = nullptr;
     }
 
   private:
